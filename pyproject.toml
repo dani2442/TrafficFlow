@@ -12,6 +12,7 @@ ipykernel = "^6.29.4"
 matplotlib = "^3.9.0"
 jaxlib = "^0.4.28"
 jax = "^0.4.28"
+osmnx = "^1.9.3"
 
 
 [build-system]
