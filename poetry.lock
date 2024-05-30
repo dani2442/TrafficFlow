@@ -1436,6 +1436,16 @@ files = [
 windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
+name = "pygraphviz"
+version = "1.13"
+description = "Python interface to Graphviz"
+optional = false
+python-versions = ">=3.10"
+files = [
+    {file = "pygraphviz-1.13.tar.gz", hash = "sha256:6ad8aa2f26768830a5a1cfc8a14f022d13df170a8f6fdfd68fd1aa1267000964"},
+]
+
+[[package]]
 name = "pyparsing"
 version = "3.1.2"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
@@ -1874,4 +1884,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "21761ed02b3657261f442420acd37a04d5c111ac2219d9e6488bca94964d6c91"
+content-hash = "e6fd65a3a4c266d7f14154f735ab60417fae7abf2591da8e253a418d57ecedd8"
