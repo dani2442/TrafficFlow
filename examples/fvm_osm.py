@@ -1,11 +1,5 @@
 import osmnx as ox
-import networkx as nx
 import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize
-
-import jax
-import jax.numpy as jnp
-import numpy as np
 
 from trafficflow.generate import init_graph_from_graph
 from trafficflow.fvm import fvm_graph
@@ -34,7 +28,7 @@ def main():
         plot_osm_graph(G, rho_checkpoints[i], ax=ax)
 
     f.savefig('images/fvm_osm.png', dpi=300)
-    plt.plot()
+    plt.show()
 
 if __name__ == '__main__':
     main()

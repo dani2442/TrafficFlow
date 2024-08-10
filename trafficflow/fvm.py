@@ -55,7 +55,8 @@ def fvm_2d(rho, I, L, dt):
     f_left = g_godunov(rho[:-2], rho[1:-1], I[:-2], I[1:-1])
     f_right = g_godunov(rho[1:-1], rho[2:], I[1:-1], I[2:])
 
-    l_inv = jnp.pow(L, -1)
+    l_inv = jnp.pow(L[1:-1], -1)
     L_inv = jnp.where(jnp.isinf(l_inv), 0, l_inv)
     
-    return jax.lax.dynamic_update_slice(jnp.copy(rho), rho[1:-1] - dt*L_inv*(f_right - f_left), 1)
+    return rho[1:-1] - dt*L_inv*(f_right - f_left)
+ 
